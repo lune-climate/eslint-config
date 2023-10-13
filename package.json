@@ -1,0 +1,35 @@
+{
+  "name": "@lune-climate/eslint-config",
+  "private": false,
+  "version": "0.0.1-alpha.1",
+  "description": "The Lune Climate shared ESLint configuration",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lune-climate/shared-configs.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "luneclimate",
+    "lune"
+  ],
+  "author": "Lune Climate <eng@lune.co>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lune-climate/shared-configs/issues"
+  },
+  "homepage": "https://github.com/lune-climate/shared-configs#readme",
+  "devDependencies": {
+    "prettier": "^3.0.3"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.7.5",
+    "eslint": "^8.51.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0"
+  },
+  "dependencies": {
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-standard": "^17.1.0"
+  }
+}
