@@ -38,5 +38,11 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/6fd476c32c4757cb9f4c442f0cd92875671eed30/packages/eslint-plugin/docs/rules/no-redeclare.md
         'no-redeclare': 'off',
         '@typescript-eslint/no-redeclare': ['error'],
+
+        // eslint-config-standard enables this rule but being able to discard values
+        // with void seems desirable. Let's disable it until we drop eslint-config-standard
+        // dependency (which I'd like to do ASAP, it pulls eslint-plugin-import and so many
+        // transitive dependencies that we don't even use.
+        'no-void': 'off',
     },
 }
