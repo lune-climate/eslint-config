@@ -1,6 +1,5 @@
 {
   "name": "@lune-climate/eslint-config",
-  "private": false,
   "version": "0.0.1-alpha.1",
   "description": "The Lune Climate shared ESLint configuration",
   "main": "index.js",
