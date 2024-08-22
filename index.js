@@ -3,7 +3,13 @@ module.exports = {
         browser: true,
         es2021: true,
     },
-    extends: ['standard', 'prettier', 'eslint:recommended', 'plugin:promise/recommended'],
+    extends: [
+        'standard',
+        'prettier',
+        'eslint:recommended',
+        'plugin:promise/recommended',
+        'plugin:@typescript-eslint/recommended-type-checked',
+    ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 12,
@@ -44,5 +50,35 @@ module.exports = {
         // dependency (which I'd like to do ASAP, it pulls eslint-plugin-import and so many
         // transitive dependencies that we don't even use.
         'no-void': 'off',
+
+        /*
+        @typescript-eslint/recommended-type-checked exceptions
+
+        To be determined if we want to keep these rules disabled long-term, at least some
+        of these look useful, we just need to configure them so they don't generate so many
+        false positives.
+        */
+
+        '@typescript-eslint/require-await': 'off',
+        '@typescript-eslint/unbound-method': 'off',
+
+        // Being able to use and interact with "any" values
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-unsafe-member-access': 'off',
+        '@typescript-eslint/no-unsafe-assignment': 'off',
+        '@typescript-eslint/no-unsafe-return': 'off',
+        '@typescript-eslint/no-unsafe-call': 'off',
+        '@typescript-eslint/no-unsafe-argument': 'off',
+
+        // Generates a lof of false positives when it doesn't always understand when a value
+        // can be safely used in a string context. We can try to configure this behavior.
+        '@typescript-eslint/no-base-to-string': 'off',
+
+        // Prevents using Big (among others) in string templates
+        '@typescript-eslint/restrict-template-expressions': 'off',
+
+        /*
+        End of @typescript-eslint/recommended-type-checked exceptions
+        */
     },
 }
