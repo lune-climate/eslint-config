@@ -7,7 +7,7 @@ module.exports = {
         'standard',
         'prettier',
         'eslint:recommended',
-        'plugin:promise/recommended'
+        'plugin:promise/recommended',
         'plugin:@typescript-eslint/recommended-type-checked',
     ],
     parser: '@typescript-eslint/parser',
