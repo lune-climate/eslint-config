@@ -67,6 +67,9 @@ module.exports = {
         // can be safely used in a string context. We can try to configure this behavior.
         '@typescript-eslint/no-base-to-string': 'off',
 
+        // We find it creates more problems than it solves.
+        '@typescript-eslint/no-use-before-define': 'off',
+
         // Prevents using Big (among others) in string templates
         '@typescript-eslint/restrict-template-expressions': 'off',
 
