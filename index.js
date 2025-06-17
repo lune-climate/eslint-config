@@ -18,11 +18,7 @@ module.exports = {
         tsconfigRootDir: __dirname,
         project: ['./tsconfig.json'],
     },
-    plugins: [
-        '@typescript-eslint',
-        'n',
-        'simple-import-sort',
-    ],
+    plugins: ['@typescript-eslint', 'n', 'simple-import-sort'],
     rules: {
         // Unnecessary with TS and generates false positives.
         // https://github.com/typescript-eslint/typescript-eslint/blob/181e705887e9e07f0fa28195644cc94e5b4f039d/docs/linting/Troubleshooting.mdx#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
