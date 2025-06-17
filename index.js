@@ -26,10 +26,19 @@ module.exports = {
         'no-use-before-define': 'off', // Unnecessary with TS and generates false positives.
         'comma-dangle': ['error', 'always-multiline'],
         'func-style': ['error', 'declaration'],
+
+        // Allows idiomatic infinite loops, rejects other cases
+        'no-constant-condition': ['error', { checkLoops: false }],
+
         'no-useless-constructor': 'off',
         'no-unused-vars': 'off',
         'no-extra-semi': 'off',
         'no-trailing-spaces': 'error',
+
+        // Doesn't complain when we have let {a, b} = obj and b is not reassigned,
+        // complains otherwise.
+        'prefer-const': ['error', { destructuring: 'all' }],
+
         '@typescript-eslint/no-useless-constructor': ['error'],
         '@typescript-eslint/no-unnecessary-type-assertion': ['error'],
         '@typescript-eslint/no-unused-vars': [
@@ -73,5 +82,13 @@ module.exports = {
         /*
         End of @typescript-eslint/recommended-type-checked exceptions
         */
+
+        'n/handle-callback-err': ['error', '^(err|error)$'],
+        'n/no-callback-literal': 'error',
+        'n/no-deprecated-api': 'error',
+        'n/no-exports-assign': 'error',
+        'n/no-new-require': 'error',
+        'n/no-path-concat': 'error',
+        'n/process-exit-as-throw': 'error',
     },
 }

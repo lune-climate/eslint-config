@@ -25,6 +25,7 @@
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^7.0.0 || ^8.0.0",
     "eslint": "^7.0.0 || ^8.51.0",
+    "eslint-plugin-n": "^17.20.0",
     "eslint-plugin-promise": "^7.1.0",
     "eslint-plugin-simple-import-sort": "^10.0.0"
   },
