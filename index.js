@@ -11,10 +11,7 @@ module.exports = {
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
-        ecmaVersion: 12,
-        sourceType: 'module',
-
-        // These are needed for some of the typescript-eslint type-based linting rules
+        // Needed for the typescript-eslint type-based linting rules
         project: ['./tsconfig.json'],
     },
     plugins: ['@typescript-eslint', 'n', 'simple-import-sort'],
