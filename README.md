@@ -19,11 +19,16 @@ yarn add --dev git+https://github.com/lune-climate/eslint-config.git#master
      be present in your `package.json`.
    * You have to provide the `peerDependencies` that we [expect](./package.json).
 
-3. Adapt your `.eslintrc` or equivalent:
+3. Create an `eslint.config.js` (or adapt your existing one):
 
    a. Remove configuration that is already provided by [this shared configuration](./index.js).
-   b. Add `@lune-climate` to `extends`, like:
+   b. Spread the shared config array into your config:
 
-   ```
-   extends: ["@lune-climate"],
-   ```
+    ```js
+    const luneConfig = require('@lune-climate/eslint-config')
+
+    module.exports = [
+        ...luneConfig,
+        // your project-specific overrides here
+    ]
+    ```
