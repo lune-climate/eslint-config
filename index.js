@@ -4,10 +4,10 @@ module.exports = {
         es2021: true,
     },
     extends: [
-        'prettier',
         'eslint:recommended',
         'plugin:promise/recommended',
         'plugin:@typescript-eslint/recommended-type-checked',
+        'prettier',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
