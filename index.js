@@ -15,7 +15,6 @@ module.exports = {
         sourceType: 'module',
 
         // These are needed for some of the typescript-eslint type-based linting rules
-        tsconfigRootDir: __dirname,
         project: ['./tsconfig.json'],
     },
     plugins: ['@typescript-eslint', 'n', 'simple-import-sort'],
