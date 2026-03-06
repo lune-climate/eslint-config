@@ -11,8 +11,7 @@ module.exports = {
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
-        // Needed for the typescript-eslint type-based linting rules
-        project: ['./tsconfig.json'],
+        projectService: true,
     },
     plugins: ['@typescript-eslint', 'n', 'simple-import-sort'],
     rules: {
