@@ -22,23 +22,7 @@ yarn add --dev git+https://github.com/lune-climate/eslint-config.git#master
 3. Adapt your `.eslintrc` or equivalent:
 
    a. Remove configuration that is already provided by [this shared configuration](./index.js).
-   b. One exception to the above is `parser` and `parserOptions`. You need to define them, for
-      example:
-
-    ```
-    parser: "@typescript-eslint/parser",
-    parserOptions: {
-        ecmaVersion: 12,
-        sourceType: "module",
-
-        // These are needed for some of the typescript-eslint type-based linting rules like
-        // no-unnecessary-condition.
-        "tsconfigRootDir": __dirname,
-        "project": ["./tsconfig.json"],
-    },
-    ```
-
-   c. Add `@lune-climate` to `extends`, like:
+   b. Add `@lune-climate` to `extends`, like:
 
    ```
    extends: ["@lune-climate"],
