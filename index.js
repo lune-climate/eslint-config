@@ -4,7 +4,6 @@ const pluginPromise = require('eslint-plugin-promise')
 const pluginN = require('eslint-plugin-n')
 const pluginSimpleImportSort = require('eslint-plugin-simple-import-sort')
 const eslintConfigPrettier = require('eslint-config-prettier')
-const globals = require('globals')
 
 module.exports = tseslint.config(
     eslint.configs.recommended,
@@ -14,10 +13,6 @@ module.exports = tseslint.config(
         extends: [tseslint.configs.recommendedTypeChecked],
         languageOptions: {
             ecmaVersion: 2021,
-            globals: {
-                ...globals.browser,
-                ...globals.es2021,
-            },
             parserOptions: {
                 projectService: true,
             },
