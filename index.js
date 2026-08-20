@@ -12,7 +12,6 @@ module.exports = tseslint.config(
         files: ['**/*.{ts,tsx,mts,cts}'],
         extends: [tseslint.configs.recommendedTypeChecked],
         languageOptions: {
-            ecmaVersion: 2021,
             parserOptions: {
                 projectService: true,
             },
