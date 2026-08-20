@@ -9,8 +9,9 @@ const globals = require('globals')
 module.exports = tseslint.config(
     eslint.configs.recommended,
     pluginPromise.configs['flat/recommended'],
-    ...tseslint.configs.recommendedTypeChecked,
     {
+        files: ['**/*.{ts,tsx,mts,cts}'],
+        extends: [tseslint.configs.recommendedTypeChecked],
         languageOptions: {
             ecmaVersion: 2021,
             globals: {
