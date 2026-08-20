@@ -1,10 +1,13 @@
 const { defineConfig } = require('eslint/config')
-const eslint = require('@eslint/js')
+const { ESLint } = require('eslint')
 const tseslint = require('typescript-eslint')
 const pluginPromise = require('eslint-plugin-promise')
 const pluginN = require('eslint-plugin-n')
 const pluginSimpleImportSort = require('eslint-plugin-simple-import-sort')
 const eslintConfigPrettier = require('eslint-config-prettier')
+
+// Recommended core rules change between ESLint majors and must match the consumer's ESLint.
+const eslint = ESLint.version.startsWith('10.') ? require('@eslint/js-10') : require('@eslint/js-9')
 
 /**
  * Create the shared ESLint configuration for a consumer repository.
