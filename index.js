@@ -1,3 +1,4 @@
+const { defineConfig } = require('eslint/config')
 const eslint = require('@eslint/js')
 const tseslint = require('typescript-eslint')
 const pluginPromise = require('eslint-plugin-promise')
@@ -5,7 +6,7 @@ const pluginN = require('eslint-plugin-n')
 const pluginSimpleImportSort = require('eslint-plugin-simple-import-sort')
 const eslintConfigPrettier = require('eslint-config-prettier')
 
-module.exports = tseslint.config(
+module.exports = defineConfig(
     eslint.configs.recommended,
     pluginPromise.configs['flat/recommended'],
     {
