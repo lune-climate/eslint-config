@@ -22,13 +22,13 @@ yarn add --dev git+https://github.com/lune-climate/eslint-config.git#master
 3. Create an `eslint.config.js` (or adapt your existing one):
 
    a. Remove configuration that is already provided by [this shared configuration](./index.js).
-   b. Spread the shared config array into your config:
+   b. Pass the consumer repository root to the shared config factory and spread its result:
 
     ```js
-    const luneConfig = require('@lune-climate/eslint-config')
+    const createLuneConfig = require('@lune-climate/eslint-config')
 
     module.exports = [
-        ...luneConfig,
+        ...createLuneConfig({ tsconfigRootDir: __dirname }),
         // your project-specific overrides here
     ]
     ```
